@@ -1,0 +1,14 @@
+[
+  {
+    "name": "My Browser",
+    "description": "An experimental open-source browser",
+    "repo": "https://github.com/your-org/browser",
+    "status": "Active"
+  },
+  {
+    "name": "Engine Core",
+    "description": "Rendering and networking engine",
+    "repo": "https://github.com/your-org/engine",
+    "status": "WIP"
+  }
+]
