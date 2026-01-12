@@ -1,46 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Xaroq</title>
-  <link rel="stylesheet" href="static/css/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Open Source Organization</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
+  </head>
+  <body
+    class="bg-white text-slate-900 dark:bg-[#0f172a] dark:text-[#e5e7eb] font-sans m-0 transition-colors duration-300"
+  >
+    <header
+      class="pt-8 pb-4 px-8 bg-slate-50 dark:bg-[#020617] border-b border-slate-200 dark:border-slate-800"
+    >
+      <a href="/">
+        <img
+          src="/static/xaroq-logo.png"
+          alt="My Open Source Organization"
+          class="h-16 w-auto mb-2 dark:brightness-100 brightness-20 transition-all"
+        />
+      </a>
+      <p>Building browsers and tools</p>
+      <nav class="flex gap-4 mt-4">
+        <a
+          href="/"
+          class="transition-all text-slate-900 dark:text-white font-bold"
+        >
+          Home
+        </a>
 
-<header>
-  <h1>Xaroq</h1>
-  <p>Building browsers and tools</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="https://github.com/Xaroq">GitHub</a>
-  </nav>
-</header>
+        <a
+          href="/about"
+          class="transition-all text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300"
+        >
+          About
+        </a>
 
-<main>
-  
-<h2>Projects</h2>
+        <div class="ml-auto flex items-center gap-4">
+          <button
+            id="theme-toggle"
+            class="cursor-pointer p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:ring-2 ring-sky-400 transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 hidden dark:block"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              />
+            </svg>
 
-<div class="projects">
-  
-  <div class="card">
-    <h3>My Browser</h3>
-    <p>An experimental open-source browser</p>
-    <span>Active</span>
-    <a href="https://github.com/your-org/browser">GitHub</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 block dark:hidden"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="https://github.com/your-org"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300"
+          >
+            GitHub
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="p-8">
+<section
+  class="py-16 px-4 mb-16 rounded-3xl bg-slate-50 dark:bg-[#020617] border border-slate-200 dark:border-slate-800 text-center"
+>
+  <div class="max-w-2xl mx-auto">
+    <h1
+      class="text-5xl font-extrabold mb-6 text-slate-900 dark:text-white tracking-tight"
+    >
+      Xaroq Browser
+    </h1>
+    <p class="text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+      A lightweight, AI enhanced browsing experience designed for speed and
+      simplicity.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="https://github.com/Xaroq/xaroq-browser/releases/latest/download/xaroq-browser.dmg"
+        class="cursor-pointer group flex items-center gap-3 bg-sky-600 hover:bg-sky-500 text-white font-bold py-4 px-10 rounded-2xl transition-all shadow-xl hover:-translate-y-1"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+          />
+        </svg>
+        Download for macOS
+      </a>
+
+      <a
+        href="https://github.com/Xaroq/xaroq-browser"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-slate-600 dark:text-slate-400 hover:text-sky-600 font-medium px-6 py-4 transition-colors"
+      >
+        View Source Code
+      </a>
+    </div>
+
+    <p class="mt-6 text-xs text-slate-400 font-mono">
+      LATEST STABLE VERSION: V1.0.0
+    </p>
   </div>
-  
-  <div class="card">
-    <h3>Engine Core</h3>
-    <p>Rendering and networking engine</p>
-    <span>WIP</span>
-    <a href="https://github.com/your-org/engine">GitHub</a>
+</section>
+
+<div class="border-t border-slate-200 dark:border-slate-800 pt-16">
+  <h2 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
+    Projects
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+    <div
+      class="bg-slate-50 dark:bg-[#020617] p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col shadow-sm dark:shadow-lg transition-all"
+    >
+      <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+        Xaroq Browser - MacOS
+      </h3>
+      <p class="text-slate-600 dark:text-gray-400 text-sm mb-4 grow">
+        An experimental open-source browser
+      </p>
+      <div class="flex justify-between items-center mt-auto">
+        <span
+          class="text-xs font-mono px-2 py-1 rounded bg-sky-100 dark:bg-slate-800 text-sky-700 dark:text-sky-400 uppercase tracking-wider"
+        >
+          Active
+        </span>
+
+        <a
+          href="https://github.com/Xaroq/xaroq-browser"
+          target="_blank"
+          class="text-sky-600 dark:text-sky-400 hover:text-sky-800 dark:hover:text-white text-sm font-medium transition-colors"
+        >
+          GitHub →
+        </a>
+      </div>
+    </div>
+    
   </div>
-  
 </div>
-
 </main>
 
-<script src="static/js/main.js"></script>
-</body>
+    <script src="static/js/main.js"></script>
+  </body>
 </html>
