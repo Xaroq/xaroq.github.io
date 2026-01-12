@@ -6,7 +6,6 @@ toggleBtn.addEventListener("click", () => {
 
   const isDark = htmlElement.classList.contains("dark");
   localStorage.setItem("theme", isDark ? "dark" : "light");
-  console.log("isDark", isDark);
 });
 
 if (
