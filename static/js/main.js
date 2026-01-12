@@ -36,3 +36,8 @@ async function fetchLatestVersion() {
 }
 
 fetchLatestVersion();
+
+const description = data.about_description;
+
+const displayElement = document.getElementById("about-text");
+displayElement.innerHTML = description;
