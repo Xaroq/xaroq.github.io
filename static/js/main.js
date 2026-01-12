@@ -17,3 +17,22 @@ if (
 } else {
   htmlElement.classList.remove("dark");
 }
+
+async function fetchLatestVersion() {
+  try {
+    const response = await fetch(
+      "https://api.github.com/repos/Xaroq/xaroq-browser/releases/latest"
+    );
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const data = await response.json();
+
+    document.getElementById("latest-version").textContent =
+      data.tag_name.toUpperCase();
+  } catch (error) {
+    console.error("Error fetching version:", error);
+    document.getElementById("latest-version").textContent = "V1.0.0"; // Fallback
+  }
+}
+
+fetchLatestVersion();
