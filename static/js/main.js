@@ -44,10 +44,10 @@ async function fetchLatestVersion() {
 
     const data = await response.json();
     latestVersionElement.textContent =
-      typeof data.tag_name === "string" ? data.tag_name.toUpperCase() : "N/A";
+      data && data.tag_name ? data.tag_name.toUpperCase() : "v0.1.0-BETA";
   } catch (error) {
     console.error("Error fetching version:", error);
-    latestVersionElement.textContent = "Unavailable";
+    latestVersionElement.textContent = "v0.1.0-BETA";
   } finally {
     window.clearTimeout(timeoutId);
   }
