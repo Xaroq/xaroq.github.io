@@ -1688,6 +1688,35 @@ html.dark .shimmer-text {
   z-index: 2;
 }
 
+.secondary-link {
+  position: relative;
+  z-index: 2;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  color: #0ea5e9;
+  transform: translateX(-4px);
+}
+
+html.dark .back-link {
+  color: #94a3b8;
+}
+
+html.dark .back-link:hover {
+  color: #7dd3fc;
+}
+
 /* ── Alignment Utilities ────────────────────────────── */
 
 .text-center {
