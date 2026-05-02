@@ -1223,6 +1223,133 @@ html.dark .principles-list li::before {
     flex-direction: column;
   }
 }
+/* ── Legal pages ───────────────────────────────────── */
+
+.legal-layout {
+  padding-top: 2.25rem;
+}
+
+.legal-body {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.legal-block {
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+html.dark .legal-block {
+  border-color: rgba(51, 65, 85, 0.65);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.legal-block h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.legal-block p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+html.dark .legal-block p {
+  color: #94a3b8;
+}
+
+.legal-block ul {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.6rem;
+  padding-left: 0;
+}
+
+.legal-block li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+html.dark .legal-block li {
+  color: #94a3b8;
+}
+
+.legal-block li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: #0f766e;
+}
+
+html.dark .legal-block li::before {
+  background: #67e8f9;
+}
+
+/* ── Site footer ──────────────────────────────────── */
+
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(248, 251, 255, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+html.dark .site-footer {
+  border-top-color: rgba(51, 65, 85, 0.65);
+  background: rgba(8, 16, 29, 0.65);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+html.dark .footer-copy {
+  color: #64748b;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-nav a {
+  font-size: 0.85rem;
+  color: #64748b;
+  transition: color 180ms ease;
+}
+
+.footer-nav a:hover {
+  color: #0f766e;
+}
+
+html.dark .footer-nav a {
+  color: #94a3b8;
+}
+
+html.dark .footer-nav a:hover {
+  color: #67e8f9;
+}
+
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
