@@ -2,99 +2,125 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Xaroq</title>
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="icon" type="image/png" href="/static/favicon.png" />
   </head>
-  <body
-    class="bg-white text-slate-900 dark:bg-[#0f172a] dark:text-[#e5e7eb] font-sans m-0 transition-colors duration-300"
-  >
-    <header
-      class="pt-8 pb-4 px-8 bg-slate-50 dark:bg-[#020617] border-b border-slate-200 dark:border-slate-800"
-    >
-      <a href="/">
-        <img
-          src="/static/xaroq-logo.png"
-          alt="Xaroq"
-          class="h-16 w-auto mb-2 dark:brightness-100 brightness-20 transition-all"
-        />
-      </a>
-      <p>Building browsers and tools</p>
-      <nav class="flex gap-4 mt-4">
-        <a
-          href="/"
-          class="transition-all text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300"
-        >
-          Home
-        </a>
-
-        <a
-          href="/about"
-          class="transition-all text-slate-900 dark:text-white font-bold"
-        >
-          About
-        </a>
-
-        <div class="ml-auto flex items-center gap-4">
-          <button
-            id="theme-toggle"
-            class="cursor-pointer p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:ring-2 ring-sky-400 transition-all"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5 hidden dark:block"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-              />
-            </svg>
-
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5 block dark:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-              />
-            </svg>
-          </button>
-
-          <a
-            href="https://github.com/Xaroq"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300"
-          >
-            GitHub
+  <body class="site-body">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container topbar">
+          <a href="/" class="brand" aria-label="Xaroq home">
+            <img src="/static/xaroq-logo.png" alt="Xaroq" class="brand-logo" />
+            <div class="brand-copy">
+              <span class="eyebrow">Xaroq</span>
+              <p>Building browsers and tools</p>
+            </div>
           </a>
+
+          <nav class="site-nav" aria-label="Primary">
+            <a href="/">Home</a>
+            <a href="/about" class="is-active">About</a>
+            <a
+              href="https://github.com/Xaroq"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle color theme"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="theme-icon theme-icon-light"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="theme-icon theme-icon-dark"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+            </button>
+          </nav>
         </div>
-      </nav>
-    </header>
+      </header>
 
-    <main class="p-8">
-<h2 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
-  About Us
-</h2>
+      <main class="container page-main">
+        <section class="content-section about-layout">
+          <div class="section-heading">
+            <span class="section-label">About</span>
+            <h1>Built openly, with AI as part of the browser itself.</h1>
+            <p>
+              Xaroq is an open-source browser project focused on simplicity,
+              transparency, and user control.
+            </p>
+          </div>
 
-<p
-  id="about-text"
-  class="text-xl text-slate-600 dark:text-gray-300 leading-relaxed mb-4"
->
-  Xaroq is an open-source, AI-powered web browser built with a focus on simplicity, transparency, and user control.<br><br>The project explores how AI can enhance everyday browsing, such as understanding pages, navigating content, and assisting users, without turning the browser into a black box or locking users into proprietary services.<br><br>What Xaroq stands for:<br><br>• AI as a first-class feature, not an add-on<br>• Transparency in how things work<br>• Modular and open design<br>• User control and privacy by default<br><br>Xaroq is developed openly and iteratively. Feedback, ideas, and contributions are welcome.<br><br>Join us on Discord: <a href='https://discord.gg/vPE2DPbR' class='text-sky-600 underline font-bold'>discord.gg/vPE2DPbR</a>
-</p>
-</main>
+          <div class="about-grid">
+            <article class="info-panel">
+              <h2>What the project is trying to do</h2>
+              <p>
+                Xaroq explores how AI can improve everyday browsing, from page
+                understanding to navigation and assistance, without turning the
+                browser into a black box.
+              </p>
+              <p>
+                The goal is to keep the product understandable, modular, and
+                straightforward to inspect.
+              </p>
+            </article>
+
+            <article class="info-panel">
+              <h2>Principles</h2>
+              <ul class="principles-list">
+                <li>AI as a first-class feature, not an add-on</li>
+                <li>Transparency in how things work</li>
+                <li>Modular and open design</li>
+                <li>User control and privacy by default</li>
+              </ul>
+            </article>
+
+            <article class="info-panel info-panel-wide">
+              <h2>Community</h2>
+              <p>
+                Xaroq is developed iteratively in public. Feedback, ideas, and
+                contributions are part of the process.
+              </p>
+              <a
+                href="https://discord.gg/vPE2DPbR"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link"
+              >
+                Join the Discord community
+              </a>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <script src="/static/js/main.js"></script>
   </body>
