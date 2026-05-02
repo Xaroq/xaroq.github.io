@@ -785,22 +785,6 @@ html.dark .brand-logo {
   filter: none;
 }
 
-.brand-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.brand-copy p {
-  color: #475569;
-  font-size: 0.95rem;
-}
-
-html.dark .brand-copy p {
-  color: #94a3b8;
-}
-
-.eyebrow,
 .section-label,
 .meta-kicker,
 .release-label,
@@ -812,7 +796,6 @@ html.dark .brand-copy p {
   font-size: 0.72rem;
 }
 
-.eyebrow,
 .section-label,
 .meta-kicker,
 .release-label {
@@ -820,7 +803,6 @@ html.dark .brand-copy p {
   font-weight: 700;
 }
 
-html.dark .eyebrow,
 html.dark .section-label,
 html.dark .meta-kicker,
 html.dark .release-label {
