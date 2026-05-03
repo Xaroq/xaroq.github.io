@@ -27,27 +27,48 @@ async function fetchLatestVersion() {
   const controller = new AbortController();
   const timeoutId = window.setTimeout(() => controller.abort(), 5000);
 
+  const releaseSources = [
+    {
+      label: "macOS",
+      fallback: "EDGE",
+      url: "https://api.github.com/repos/Xaroq/xaroq-browser/releases/latest",
+    },
+    {
+      label: "Windows",
+      fallback: "LATEST",
+      url: "https://api.github.com/repos/Xaroq/xaroq-browser-win/releases/latest",
+    },
+  ];
+
   try {
-    const response = await fetch(
-      "https://api.github.com/repos/Xaroq/xaroq-browser/releases/latest",
-      {
-        signal: controller.signal,
-        headers: {
-          Accept: "application/vnd.github+json",
-        },
-      }
+    const results = await Promise.allSettled(
+      releaseSources.map(async (source) => {
+        const response = await fetch(source.url, {
+          signal: controller.signal,
+          headers: {
+            Accept: "application/vnd.github+json",
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`GitHub API request failed with ${response.status}`);
+        }
+
+        const data = await response.json();
+        const version = data && data.tag_name ? data.tag_name.toUpperCase() : source.fallback;
+        return `${source.label} ${version}`;
+      })
     );
+    const versions = results
+      .filter((result) => result.status === "fulfilled")
+      .map((result) => result.value);
 
-    if (!response.ok) {
-      throw new Error(`GitHub API request failed with ${response.status}`);
-    }
-
-    const data = await response.json();
-    latestVersionElement.textContent =
-      data && data.tag_name ? data.tag_name.toUpperCase() : "v0.1.0-BETA";
+    latestVersionElement.textContent = versions.length
+      ? versions.join(" | ")
+      : "macOS EDGE | Windows LATEST";
   } catch (error) {
     console.error("Error fetching version:", error);
-    latestVersionElement.textContent = "v0.1.0-BETA";
+    latestVersionElement.textContent = "macOS EDGE | Windows LATEST";
   } finally {
     window.clearTimeout(timeoutId);
   }

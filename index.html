@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xaroq</title>
-  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/style.css?v=1.0.2" />
   <link rel="icon" type="image/png" href="/static/favicon.png" />
 </head>
 
@@ -62,7 +62,7 @@
           </div>
 
           <div class="release-strip" aria-live="polite">
-            <span class="release-label">Latest beta release</span>
+            <span class="release-label">Latest releases</span>
             <span id="latest-version" class="release-value">Fetching...</span>
           </div>
         </div>
@@ -84,7 +84,7 @@
             </div>
             <div class="stat-card">
               <span>Platform</span>
-              <strong>macOS + more</strong>
+              <strong>macOS + Windows</strong>
             </div>
             <div class="stat-card">
               <span>Model</span>
@@ -112,7 +112,7 @@
           <article class="project-card interactive-card">
             <div class="project-header">
               <span class="status-pill">Active</span>
-              <span class="project-platform">macOS</span>
+              <span class="project-platform">macOS + Windows</span>
             </div>
             <h3>Xaroq Browser</h3>
             <p>
@@ -175,7 +175,7 @@
             </button>
           </article>
 
-          <article class="platform-card platform-card--soon">
+          <article class="platform-card platform-card--available">
             <div class="platform-icon">
               <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
                 <path
@@ -183,13 +183,18 @@
               </svg>
             </div>
             <h3>Windows</h3>
-            <p>Native installer for Windows 10 & 11.</p>
-            <span class="platform-badge platform-badge--coming">
-              <span class="shimmer-text">Coming Soon</span>
-            </span>
-            <button class="button button-secondary platform-btn" disabled>
-              Notify me
-            </button>
+            <p>Download the latest ZIP build for 64-bit or 32-bit Windows systems.</p>
+            <span class="platform-badge platform-badge--live">Available now</span>
+            <div class="platform-actions">
+              <a href="https://github.com/Xaroq/xaroq-browser-win/releases/download/latest/XaroqBrowser-win-x64.zip"
+                class="button button-primary platform-btn">
+                Download x64 ZIP
+              </a>
+              <a href="https://github.com/Xaroq/xaroq-browser-win/releases/download/latest/XaroqBrowser-win-x86.zip"
+                class="button button-secondary platform-btn">
+                Download x86 ZIP
+              </a>
+            </div>
           </article>
         </div>
       </section>
@@ -229,7 +234,7 @@
     </footer>
   </div>
 
-  <script src="/static/js/main.js?v=1.0.1"></script>
+  <script src="/static/js/main.js?v=1.0.2"></script>
 </body>
 
 </html>

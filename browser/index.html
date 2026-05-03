@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xaroq Browser - Download & Installation</title>
-  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/style.css?v=1.0.2" />
   <link rel="icon" type="image/png" href="/static/favicon.png" />
 </head>
 
@@ -57,7 +57,7 @@
           </p>
 
           <div class="release-strip" aria-live="polite">
-            <span class="release-label">Current Release</span>
+            <span class="release-label">Latest releases</span>
             <span id="latest-version" class="release-value">Fetching...</span>
           </div>
         </div>
@@ -124,20 +124,29 @@
             </button>
           </article>
 
-          <article class="platform-card platform-card--soon">
+          <article class="platform-card platform-card--available">
             <div class="platform-icon">
               <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36">
                 <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
               </svg>
             </div>
             <h3>Windows</h3>
-            <p>Native installer for Windows 10 &amp; 11.</p>
-            <span class="platform-badge platform-badge--coming">
-              <span class="shimmer-text">Coming Soon</span>
-            </span>
-            <button class="button button-secondary platform-btn" disabled>
-              Notify me
-            </button>
+            <p>Download the latest ZIP build for 64-bit or 32-bit Windows systems.</p>
+            <span class="platform-badge platform-badge--live">Available now</span>
+            <div class="platform-actions">
+              <a
+                href="https://github.com/Xaroq/xaroq-browser-win/releases/download/latest/XaroqBrowser-win-x64.zip"
+                class="button button-primary platform-btn"
+              >
+                Download x64 ZIP
+              </a>
+              <a
+                href="https://github.com/Xaroq/xaroq-browser-win/releases/download/latest/XaroqBrowser-win-x86.zip"
+                class="button button-secondary platform-btn"
+              >
+                Download x86 ZIP
+              </a>
+            </div>
           </article>
         </div>
       </section>
@@ -156,7 +165,7 @@
     </footer>
   </div>
 
-  <script src="/static/js/main.js?v=1.0.1"></script>
+  <script src="/static/js/main.js?v=1.0.2"></script>
 </body>
 
 </html>
