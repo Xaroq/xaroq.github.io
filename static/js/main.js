@@ -33,11 +33,6 @@ async function fetchLatestVersion() {
       fallback: "EDGE",
       url: "https://api.github.com/repos/Xaroq/xaroq-browser/releases/latest",
     },
-    {
-      label: "Windows",
-      fallback: "LATEST",
-      url: "https://api.github.com/repos/Xaroq/xaroq-browser-win/releases/latest",
-    },
   ];
 
   try {
@@ -65,10 +60,10 @@ async function fetchLatestVersion() {
 
     latestVersionElement.textContent = versions.length
       ? versions.join(" | ")
-      : "macOS EDGE | Windows LATEST";
+      : "macOS EDGE";
   } catch (error) {
     console.error("Error fetching version:", error);
-    latestVersionElement.textContent = "macOS EDGE | Windows LATEST";
+    latestVersionElement.textContent = "macOS EDGE";
   } finally {
     window.clearTimeout(timeoutId);
   }
