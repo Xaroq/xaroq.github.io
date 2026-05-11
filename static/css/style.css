@@ -1169,6 +1169,10 @@ html.dark .project-card {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr);
+  grid-template-areas:
+    "copy visual"
+    "meta meta";
+  align-items: start;
   gap: 2rem;
   padding: 2rem;
   border-radius: 1.75rem;
@@ -1203,6 +1207,12 @@ html.dark .project-card {
 .section-heading h2 {
   font-size: clamp(2.3rem, 5vw, 4.4rem);
   margin: 0.75rem 0 1rem;
+}
+
+.hero-copy {
+  grid-area: copy;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-heading h2 {
@@ -1316,12 +1326,15 @@ html.dark .release-strip {
 }
 
 .hero-meta {
-  display: flex;
-  flex-direction: column;
+  grid-area: meta;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
   gap: 1rem;
+  align-items: stretch;
 }
 
 .hero-visual {
+  grid-area: visual;
   position: relative;
   min-height: 220px;
   border-radius: 1.5rem;
@@ -1345,6 +1358,11 @@ html.dark .hero-visual {
   display: grid;
   place-items: center;
   isolation: isolate;
+}
+
+.hero-meta .meta-card,
+.hero-meta .stats-grid {
+  height: 100%;
 }
 
 .hero-visual-logo {
@@ -1605,6 +1623,17 @@ html.dark .principles-list li::before {
 
   .hero-panel,
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    grid-template-areas:
+      "copy"
+      "visual"
+      "meta";
+  }
+
+  .hero-meta {
     grid-template-columns: 1fr;
   }
 
